@@ -1,0 +1,251 @@
+/* START */
+body {
+    background: linear-gradient(35deg , black, dodgerblue);
+}
+
+/* HEADER */
+#header {
+    width: 100%;
+    padding: 10px 100px 0;
+    background: linear-gradient(to bottom , rgba(0, 0, 0, 0.8) , transparent);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+.btn_back {
+    width: 60px;
+    height: 40px;
+    background: url(../Icons/Back-Arrow.png) no-repeat center center;
+    background-size: 50%;
+    background-color: rgb(8, 8, 177);
+    border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    left: 5%;
+}
+
+#header > :last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn#all {
+    width: min(100%,500px);
+}
+
+/* MAIN */
+#main {
+    width: 100%;
+    padding: 20px 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.box {
+    width: calc(100% / 6);
+    height: 250px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px black;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.box img:hover {
+    box-shadow: 0 0 5px black;
+}
+
+.box img:active {
+    box-shadow: 0 0 5px black;
+}
+
+/* modal */
+.modal {
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(45deg , rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 0.7));
+    border: 3px solid darkblue;
+    border-radius: 50px;
+    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(0.6);
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.modal-show {
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+}
+
+.btn_close {
+    padding: 10px;
+    background-color: transparent;
+    border: unset;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 99;
+    font-size: 60px;
+    color: white;
+    transition-duration: 0.25s;
+}
+
+.btn_close:hover {
+    color: red;
+    transform: rotate(90deg);
+}
+
+.modal-img {
+    max-width: 85%;
+    max-height: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 0.5s;
+}
+
+.modal-btn {
+    width: 60px;
+    height: 120px;
+    background: no-repeat center center;
+    background-size: contain;
+    border: unset;
+    border-radius: 5px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    bottom: 41%;
+}
+
+.modal-btn:hover {
+    opacity: 1;
+}
+
+.modal-btn:active {
+    transform: scale(0.9);
+}
+
+.btn_perv {
+    background-image: url(../Icons/Forward-Back.png);
+    left: 1%;
+}
+
+.btn_next {
+    background-image: url(../Icons/Forward-Next.png);
+    right: 1%;
+}
+
+/* FOOTER */
+.social-media {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-item {
+    background-color: #c0c0c0;
+}
+
+/* Responsive */
+@media (max-width:1024px) {
+    .btn_back {
+        top: 10px;
+        left: 2%;
+    }
+
+    .box {
+        width: calc(100% / 5);
+        height: 200px;
+    }
+}
+
+@media (max-width:768px) {
+    #main {
+        padding: 20px 20px 40px;
+    }
+
+    .box {
+        width: calc(100% / 4);
+    }
+
+    .modal img {
+        top: calc(50% - 25px);
+    }
+
+    .modal-btn {
+        width: 90px;
+        height: 40px;
+        bottom: 1%;
+    }
+    
+    .btn_perv {
+        left: 20%;
+    }
+
+    .btn_next {
+        right: 20%;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+
+@media (max-width:600px) {
+    #header {
+        padding: 10px 30px 0;
+    }
+
+    .btn_back {
+        display: none;
+    }
+
+    .box {
+        width: calc(100% / 3);
+        height: 150px;
+    }
+}
+
+@media (max-width:450px) {
+    #header button {
+        margin: 4px;
+        transform: scale(0.9);
+    }
+
+    .box {
+        width: calc(100% / 2);
+    }
+
+    .modal-img {
+        transform: translate(-50%,-45%);
+    }
+}
+/* THE END */
