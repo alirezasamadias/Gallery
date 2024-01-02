@@ -108,8 +108,8 @@ panelImg.forEach((img,index)=>{
 
         // keyboard
         window.addEventListener('keyup',(e)=>{
-            e.keyCode === 37 ? pervImg() : false;
-            e.keyCode === 39 ? nextImg() : false;
+            e.key === 'ArrowLeft' ? pervImg() : false;
+            e.key === 'ArrowRight' ? nextImg() : false;
         });
     });
 });

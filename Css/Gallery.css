@@ -44,10 +44,11 @@ body {
 /* MAIN */
 #main {
     width: 100%;
+    min-height: 80vh;
     padding: 20px 30px 40px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 }
 

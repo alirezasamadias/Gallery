@@ -20,6 +20,9 @@ body {
 }
 
 /* MAIN */
+#main {
+    min-height: 100vh;
+}
 /* panel */
 .panel {
     width: 100%;

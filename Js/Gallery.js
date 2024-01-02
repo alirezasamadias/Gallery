@@ -86,7 +86,7 @@ btnClose.addEventListener('click',()=>{
 });
 // keyboard
 window.addEventListener('keyup',(e)=>{
-    e.keyCode === 27 ? hideModal() : false;
+    e.key === 'Escape' ? hideModal() : false;
 });
 // debug
 for (const modalChild of modalChilds) {
@@ -124,8 +124,8 @@ const changeImage = (array)=>{
 
             // keyboard
             window.addEventListener('keyup',(e)=>{
-                e.keyCode === 39 ? nextImg() : false;
-                e.keyCode === 37 ? pervImg() : false;
+                e.key === 'ArrowRight' ? nextImg() : false;
+                e.key === 'ArrowLeft' ? pervImg() : false;
             });
         });
     });
