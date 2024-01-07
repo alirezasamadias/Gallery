@@ -21,6 +21,11 @@ document.onreadystatechange = ()=>{
     }
 };
 
+// debug 
+if (modalImg.getAttribute('src') === '') {
+    modalImg.style.opacity = 0
+}
+
 // panel img face
 const setPanelImg = ()=>{
     for (const image of panelImg){
