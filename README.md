@@ -1,6 +1,6 @@
 # Gallery
 
-![alt text](Images/Screen-Project.png)
+![Screen Project](Images/Screen-Project.png)
 
 ## Url
 https://gallery-zyvr.onrender.com
