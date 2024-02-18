@@ -1,7 +1,3 @@
-// START
-// site loader
-const bodyEl = document.querySelector('body');
-const siteLoaderEl = document.querySelector('.site-loader');
 // header slide
 const headerEl = document.getElementById('header');
 // header btn
@@ -17,18 +13,6 @@ const modalImage = document.querySelector('.modal-img');
 const btnClose = document.querySelector('.btn_close');
 const btnPerv = document.querySelector('.btn_perv');
 const btnNext = document.querySelector('.btn_next');
-
-// site loader
-document.onreadystatechange = ()=>{
-    if (document.readyState !== "complete") {
-        bodyEl.style.visibility = "hidden";
-        siteLoaderEl.style.visibility = "visible";
-    } else {
-        siteLoaderEl.style.opacity = "0";
-        siteLoaderEl.style.visibility = "hidden";
-        bodyEl.style.visibility = "visible";
-    }
-};
 
 // header slide
 const headerSlide = ()=>{
@@ -191,4 +175,3 @@ for (const headerBtn of headerBtns) {
         changeImage(imgTarget);
     });
 }
-// THE END

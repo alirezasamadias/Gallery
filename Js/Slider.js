@@ -1,25 +1,9 @@
-// START
-// site loader
-const bodyEl = document.querySelector('body');
-const siteLoaderEl = document.querySelector('.site-loader');
 // panel
 const panelImg = document.querySelectorAll('.panel-image');
 // modal
 const modalImg = document.querySelector('.modal-img');
 const btnPerv = document.querySelector('.btn-perv');
 const btnNext = document.querySelector('.btn-next');
-
-// site loader
-document.onreadystatechange = ()=>{
-    if (document.readyState !== "complete") {
-        bodyEl.style.visibility = "hidden";
-        siteLoaderEl.style.visibility = "visible";
-    } else {
-        siteLoaderEl.style.opacity = "0";
-        siteLoaderEl.style.visibility = "hidden";
-        bodyEl.style.visibility = "visible";
-    }
-};
 
 // debug 
 if (modalImg.getAttribute('src') === '') {
@@ -118,4 +102,3 @@ panelImg.forEach((img,index)=>{
         });
     });
 });
-// THE END
