@@ -3,7 +3,7 @@
 ![Screen Project](Images/Screen-Project.png)
 
 ## Url
-https://gallery-zyvr.onrender.com
+https://galleryjs2023.netlify.app/
 
 ### About
 A mini project with javascript a bit of design
